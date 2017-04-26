@@ -26,13 +26,14 @@ function codepenify(plugin) {
 	fs.writeFileSync(WORKING_DIRECTORY+"/codepen.js", template(plugin))
 	console.log("Please wait...")
 	exec(`cd ${WORKING_DIRECTORY}`
-		+`&& npm install -g browserify babel-cli babel-preset-env uglify-js ${plugin}`
-		+`&& browserify codepen.js | babel --presets=env | uglifyjs --compress --mangle > codepen.bundle.js`
+		+`&& npm install -g browserify babel-cli`
+		+`&& npm install babel-preset-env ${plugin}`
+		+`&& browserify codepen.js | babel --presets=env > codepen.bundle.js` //TODO: add babel-preset-babili
 		, {stdio: "inherit" })
 	console.log("Bundle generated, copying to clipboard...")
 	copy(fs.readFileSync(WORKING_DIRECTORY+"/codepen.bundle.js"))
 	console.log("Opening instructions for Codepen... " + INSTRUCTIONS_PEN_URL)
 	open(INSTRUCTIONS_PEN_URL)
-	cleanup(WORKING_DIRECTORY)
+	//cleanup(WORKING_DIRECTORY)
 	console.log("Done !")
 }
