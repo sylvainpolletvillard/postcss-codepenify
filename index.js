@@ -34,6 +34,5 @@ function codepenify(plugin) {
 	copy(fs.readFileSync(WORKING_DIRECTORY+"/codepen.bundle.js"))
 	console.log("Opening instructions for Codepen... " + INSTRUCTIONS_PEN_URL)
 	open(INSTRUCTIONS_PEN_URL)
-	//cleanup(WORKING_DIRECTORY)
-	console.log("Done !")
+	cleanup(WORKING_DIRECTORY)
 }
