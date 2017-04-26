@@ -4,7 +4,7 @@ postcss-codepenify
 ## Installation
 
 ```
-npm i -g codepenify
+npm i -g postcss-codepenify
 ```
 
 ## Usage
