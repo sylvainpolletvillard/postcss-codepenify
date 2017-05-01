@@ -1,6 +1,10 @@
 postcss-codepenify
 ===================
 
+A CLI tool to get a Codepen template with specified PostCSS plugins, thanks to @jon_neal instructions
+
+Current status: 🚧 EXPERIMENTAL 🚧
+
 ## Installation
 
 ```

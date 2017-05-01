@@ -31,7 +31,7 @@ function codepenify(plugins) {
 		to: plugins[0]
 	});
 	exec(`cd ${WORKING_DIRECTORY}`
-		+` && npm install`
+		+` && npm install --no-optional`
 		+` && npm install ${plugins.join(" ")}`
 		+` && npm run build`
 		, { stdio: "inherit" })

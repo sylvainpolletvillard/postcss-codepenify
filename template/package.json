@@ -1,5 +1,8 @@
 {
   "name": "postcss-codepenify-template",
+  "description": "Template for postcss-codepenify build task",
+  "repository": "https://github.com/sylvainpolletvillard/postcss-codepenify",
+  "license": "MIT",
   "dependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
